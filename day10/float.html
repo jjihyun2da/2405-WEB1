@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- link는 꺽새쓰지말고 그냥 링크하고 엔터하면 자동입력된다. 오타확률 줄이기-->
+<link rel="stylesheet" href="../reset.css"> 
+<style>
+    .hi {
+        float:  left;
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+    }
+    .box {
+        width: 200px;
+        height: 200px;
+        border: 1px solid #222;
+
+        float: left;
+    }
+    .분리 {
+        clear: both;
+    }
+</style>
+<body>
+    <!-- alt + shift + 방향키(위,아래) 복사-->
+    <!-- 드래그 -> ctrl + D 로 드래그한 부분과 같은 문자가 선택됨-->
+    <!-- ctrl + alt 여러줄 동시 선택가능/ 번거롭게 똑같은거 안써도됨-->
+    <div class="hi">안녕하세요</div>
+    <div class="hi">안녕하세요</div>
+    <div class="hi">안녕하세요</div>
+    <div class="hi">안녕하세요</div>
+    <div class="hi">안녕하세요</div>
+
+    <div class="box 분리">BOX</div>
+    <div class="box">BOX</div>
+    <div class="box">BOX</div>
+    <div class="box">BOX</div>
+
+    <div style="clear: both;">테스트</div>
+
+    <div class="contianer">
+        <div class="box">내부BOX</div>
+        <div class="box">내부BOX</div>
+        <div class="box">내부BOX</div>
+        <div class="box">내부BOX</div>
+    </div>
+    <div style="clear: both;">다음에 오는애</div>
+
+    <!-- float 속성은 다양한 문제점을 가지고있다. - 안쓰는게좋아요. -->
+
+
+</body>
+</html>
