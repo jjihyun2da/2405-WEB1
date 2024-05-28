@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+        .container {
+            /*width: 420px;*/
+            height: 800px;
+            border: 1px solid #222;
+            display: flex;
+/* 컨테이너가 420인데 박스가 200으로 5개가 들어가면 자리가 모자르니까 플렉스 속성(구부러지고 유동성있는 성질)에의해
+박스들이 형태가 변형됨. 420에 맞게 들어갈수 있도록 너비가 줄어듬. 이걸 방지하기위해 flex wrap를 적용하면
+줄바꿈되어 형태가유지됨. */
+
+          
+            gap: 8px;
+            
+            /* 
+            row gap: 16px;
+               column gap: 16px; 
+            */
+
+           justify-content: space-between;
+            /*space between은 간격을 정렬할때 너무 구려서 갭 효과를 통해 일정하게 간격을 정리한다 
+            space between을 했기 때문에 gap 일아 동시에효과를 넣어도 갭 효과가 눈에 안보일 수 있지만
+            다른 웹에서 사용할때는 다르게 보일 수 있기때문에 갭을 설정해놔야 안전하게 컨텐츠가 일정한
+            간격을 보여주게 하는 안전장치가된다. gap=사회적 거리두기 같은 느낌*/
+
+           /* 컨텐츠가 부모 밖으로 넘쳤을 때 줄바꿈을 통해 여러줄로 표시 할 수 있는 속성*/
+           flex-wrap: wrap;
+           /* 컨텐츠가 여러줄이 되었을 때 수직뱡향 정렬을 다룰 수 있다. */
+           align-content: flex-start;
+         
+
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            border: 1px solid #222;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">BOX</div>
+        <div class="box">BOX</div>
+        <div class="box">BOX</div>
+        <div class="box">BOX</div>
+        <div class="box">BOX</div>
+    </div>
+    <!-- div.container>div.box{BOX}*5-->
+</body>
+</html>

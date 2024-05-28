@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+        .container {
+            display: flex;
+            /* justify-content: space-between; */
+
+            /* flex-direction: row; < 기본값 */
+            flex-direction: column;
+            width: 800px;
+            height: 800px;
+            border: 1px solid #222;
+
+            justify-content: space-between;
+            /* 정렬축을 기준. 컨텐츠가 오른쪽으로 가는 정렬이면 그 방향으로해서 효과가 적용됨.
+            플렉스 방향에 따라 가로세로는 바뀔수있음. 플렉스가 컬럼이면 세로 아래로 내려가는 정렬이므로 그렇게 효과적용*/
+            align-items:  center;
+            /* 얼라인은 중심축을 기준으로 효과가 적용. 정렬과 다르게 컨텐츠의 중심축이 어디냐가 중요함. */
+
+            
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            border: 1px solid #222;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">BOX</div>
+        <div class="box">BOX</div>
+        <div class="box">BOX</div>
+        <div class="box">BOX</div>
+        <div class="box">BOX</div>
+    </div>
+</body>
+</html>

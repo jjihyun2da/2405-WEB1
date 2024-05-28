@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+        .container {
+            display: flex;
+            /* align-items: center; */
+            gap: 8px;
+        }
+
+
+        .temp-img {
+            background-color: pink;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            
+            flex-shrink: 0;
+            flex-grow: 1;
+            /* 컨텐츠가 많아서 공간이 없으면 grow라도 작동을 안할 수도 있음 */
+        }
+        
+        .comment {
+            /*flex-grow: 1;*/
+            width: 100%;
+        }
+
+        .button {
+            flex-shrink: 0;
+            /*안찌그러지게하는 역할. 컨텐츠가 많아서 넘쳐서 짜부되더라도 안찌그러지게하는 속성. 비율을 설정하는것.*/
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="temp-img"></div>
+        <p class="comment">안녕하세요</p>
+        <button>삭제</button>
+    </div>
+</body>
+</html>
