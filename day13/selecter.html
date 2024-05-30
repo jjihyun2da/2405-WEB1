@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  <link rel="stylesheet" href="../reset.css">
+  <style>
+
+  </style>
+</head>
+
+<body>
+ <!-- 
+    * : 전체를 뜻하는 선택자, 초기화 용도로 사용한다. (margin 0, padding 0)
+    img : 태그 선택자, 특정 태그를 초기화 하는데에 사용 (img{ display : block; }등)
+    #img-id : 아이디 선택자, 유니크한 값으로 높은 우선순위를 가진다.
+    .img-class : 클래스 선택자, 일반적으로 가장 많이 사용하는 형태
+
+    #img-id.img-class : 이미지가 아이디며서 이미지 클래스인 개체를 선택하겠다. 
+
+ -->   
+<img src="img-id" class="img-class" src="주소" alt="대체텍스트">
+<!-- img#img-id.img-class -->
+
+<div class="container">
+    <div class="hi hello">
+        <div class="bye"></div>
+    </div>
+    <!-- div.hi.hello -->
+</div>
+<!-- 후손 선택자 :[.container .bye ] (0) - 후손은 내 아래 모든 족보를 뜻함. 컨테이너의 후손이 바이 라는 것은 맞는말임
+     자손(자식) 선택자 : [.container > .bye ] (X) - 자식은 내 바로 아래 족보. 컨테이너의 자식은 바이가 아님. 하이헬로의 자식이 바이임. 그래서 틀린것임. 하이헬로의 후손이 바이도맞음
+     수식으로 결과값이 같더라도, 조건이 많을 수록, 그리고 아래에있을수록 우선순위가 높음. 
+
+     후손 자손 선택자는 css를 구조적으로 만들어 줄 수 있는 반면, 
+     너무 자주 사용하게되면 유지보수가 굉장히 힘드므로, 많은 단계에서 사용하는 것은 자제하는 것이 좋음.
+
+     띄어쓰기 유무는 중요함. [.hi.hello] 띄어쓰기가 없으므로, 하이 이면서 헬로우인 것을 의미함. 그럼 div class=hi hello 
+     띄어쓰기는 속해있다는 의미임. 
+
+-->
+
+<input class= "test-button" type="button" value="버튼">
+<!-- 
+    [type] : 속성을 가지고 있는 개체를 대상으로 함 
+    [type="button"] : 속성이 문자열(button)과 같을때
+    [type~="button"] : 띄어쓰기를 구분해 해당 문자열이 포함되어 있을 때
+    [type|="button"] : 속성이 문자열과 같거나, 문자열 뒤에 -(하이픈) 이 붙은 경우
+    [type^="button"] : 해당 문자열로 시작할 때
+    [type$="button"] : 해당 문자열로 끝날 때
+    [type*="button"] : 해당 문자열이 포함될 때
+ -->
+
+ <!-- 
+    첫째  + 둘째 : 첫째 뒤에, 둘째가 딱 붙어있을 떄만 작동
+    첫쨰 ~  셋째 : 첫쨰뒤에 셋째가 있을 때. 첫째와 셋째 사이의 거리는 상관없음. 
+  -->
+
+ </body>
+</html>
