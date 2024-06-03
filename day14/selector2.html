@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+        .reaction-box {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .reaction-box:hover {
+            background-color: coral;
+
+        }
+
+        .reaction-box:active {
+            background-color: red;
+
+        }
+
+        input:enabled {
+            background-color: green;
+            color: red;
+        }
+        input:disabled {
+            background-color: orange;
+            color: navy;
+        }
+
+        input:focus {
+            background-color: black;
+            color: white;
+
+        }
+        /* 아직 방문한 적이 없는 링크 */
+        a:link {
+            color: red;
+
+        }
+        /* 방문한 적이 있는 링크 */
+        a:visited {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        접두
+        : first, last. nth, nth-last
+        nth-last : 뒤에서 부터 n번째
+        nth : 앞에서 부터 n번쨰
+        
+        접미
+        : child, of-type
+        child : 자식, (내가 몇번째 자식인지가 중요)
+        - and 조건이라 태그의 모든 조건을 만족해야함 예를들어
+        div:nth-child(3) 이면 div 태그이면서 3번째여야하는 두 조건 모두 만족해야함
+        of-type : 유형, (내가 몇번 째 등장하는지가 중요)
+        - div:nth-oftype(3) 이면 그 컨테이너안의 모든 태그들 중에서 3번째 태그이면 
+        div 태그가 아니라도 괜찮음. 
+
+     -->
+
+     <!-- 
+        반응 선택자
+        선택자:active -> 클릭중 일때
+        선택자:hover -> 마우스를 올렸을 때
+
+        선생님 github참고하기. hover가 꼭 뒤에있을 필요는 없음. 
+      -->
+
+    
+
+      <!-- 
+        상태 선택자 : input의  부수 속성
+        :checked - 체크박스등이 체크되어있을 때
+        :focus - input 태그가 포커스를 가지고있을 때
+        :enabled - 활성화된 컨텐츠일 때
+        :disabled - 비활성화된 컨텐츠일 때
+         
+        p.166 9-10 예제 작성해보기
+
+       -->
+
+      <div class="reaction-box">
+        반응 선택자
+      </div>
+
+      <h3>enabled</h3>
+      <p>
+        <input type="text"/>
+      </p>
+
+      <h3>disabled</h3
+    >
+      <p>입력을 할 수 없는 상태로 만들기
+        <input disabled="disabled"/>
+      </p>
+
+      <!--링크선택자-->
+      <a href="http://naver.com">네이버</a>
+      <a href="http://op.gg">롤 전적검색</a>
+</body>
+</html>
