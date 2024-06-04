@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+        .background-box {
+             width: 500px; 
+             height: 1000px; 
+
+             /* 
+             back ground-image 속성은 포토샵의 레이어처럼 여러 이미지를 중첩할 수 있다. - 근데 잘 안씀 */
+            background-image: url(../image/nam.jpg);
+            /* 이미지경로는 url에 작성 */
+            background-size: 100%;
+
+            /* background size: 배경의 크기ㅡㄹ 다룰 수 있게 해주는 속성
+            100% : 컨텐츠의 width를 기준으로 가득 채운다
+            100% 100% : width, height 를 기준으로 가득 채운다 (높은 확률로 이미지 찌그러짐)
+            cover: 배경을 유동적으로 늘려 비율은 유지한 상태로 컨텐츠의 빈공간을 안보이게 덮어준다.
+            contain: 배경을 유동적으로 늘리거나 줄여 비율을 유지한 상태로 배경 이미지를 전부 보이게 한다.
+             */
+
+            /* background-repeat: no-repeat */
+            
+            /* 원본이미지 사이즈가 박스 500 500 보다 작으면 반복되는 성질이있음
+            그게 싫으면 리핏을  nonegkausehlsek
+            background img의크기는 background box의 크기를 조절할 수 없다. 
+            사진이 크다고 지정해둔 박스의 크기가 이미지 크기에맞게 조절이안됨*/
+
+            /* background size에 100% 100% 이면 x축 Y축 의 비율을 의미해서
+            사진이 원본 비율과 다르게 늘어나서 좋지않음 */
+
+            /* 스트라이프 이미지: 웹의 아이콘등을 하나의 사진으로 묶어 
+                                 용량을 효율적으로 관리하는 방식
+                                 요즘은 인터넷 속도나 용량제한이 매우 예전에 비해 굉장히 발달해 의미가 많이 
+                                 퇴색되었다. */
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="background-box"></div>
+</body>
+</html>
